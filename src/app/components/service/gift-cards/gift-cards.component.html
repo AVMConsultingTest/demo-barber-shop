@@ -1,0 +1,300 @@
+<section class="m-3">
+    <div class="p-b-20 position-relative">
+        <img class="w100 h30" src="./../../../../assets/images/services/Frame 94.png">
+        <div class="text-white text-center position-absolute text-gift-card">
+            <h3>A Little Something</h3>
+            <h3 class="gift-card p-5">Gift Cards</h3>
+            <h4>For You</h4>
+        </div>
+    </div>
+    <section *ngIf="indexTab === 1">
+        <section class="bg-white mb-3">
+            <div class="row p-2">
+                <div class="col-md-10">
+                    <h3>Choose the amount you want to gift</h3>
+                </div>
+                <div class="col-md-1 p-1">
+                    <button class="rounded border border-0 bgSelect text-black">$0.00</button>
+                </div>
+                <div class="col-md-1 p-1">
+                    <button class="btn-brown rounded border border-0">Buy</button>
+                </div>
+            </div>
+        </section>
+        <section class="bg-white">
+            <div class="border-bottom border-black">
+                <div class="row p-2">
+                    <div class="col-md-10">
+                        <h3>Haircut Adult Giftcard</h3>
+                        <p>Haircut Adult Giftcard is not included</p>
+                        <h4>More Information
+                            <span class="ps-3"><i class="bi bi-info-circle-fill"></i></span>
+                        </h4>
+                    </div>
+                    <div class="col-md-1 p-1">
+                        <button class="rounded border border-0 bgSelect text-black">$29.00</button>
+                    </div>
+                    <div class="col-md-1 p-1">
+                        <button (click)="indexTab = 2" class="btn-brown rounded border border-0">Buy</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-bottom border-black">
+                <div class="row p-2">
+                    <div class="col-md-10">
+                        <h3>Haircut Adult Giftcard</h3>
+                        <p>Haircut Adult Giftcard is not included</p>
+                        <h4>More Information
+                            <span class="ps-3"><i class="bi bi-info-circle-fill"></i></span>
+                        </h4>
+                    </div>
+                    <div class="col-md-1 p-1">
+                        <button class="rounded border border-0 bgSelect text-black">$29.00</button>
+                    </div>
+                    <div class="col-md-1 p-1">
+                        <button (click)="indexTab = 2" class="btn-brown rounded border border-0">Buy</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-bottom border-black">
+                <div class="row p-2">
+                    <div class="col-md-10">
+                        <h3>Haircut Adult Giftcard</h3>
+                        <p>Haircut Adult Giftcard is not included</p>
+                        <h4>More Information
+                            <span class="ps-3"><i class="bi bi-info-circle-fill"></i></span>
+                        </h4>
+                    </div>
+                    <div class="col-md-1 p-1">
+                        <button class="rounded border border-0 bgSelect text-black">$29.00</button>
+                    </div>
+                    <div class="col-md-1 p-1">
+                        <button (click)="indexTab = 2" class="btn-brown rounded border border-0">Buy</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-bottom border-black">
+                <div class="row p-2">
+                    <div class="col-md-10">
+                        <h3>Haircut Adult Giftcard</h3>
+                        <p>Haircut Adult Giftcard is not included</p>
+                        <h4>More Information
+                            <span class="ps-3"><i class="bi bi-info-circle-fill"></i></span>
+                        </h4>
+                    </div>
+                    <div class="col-md-1 p-1">
+                        <button class="rounded border border-0 bgSelect text-black">$29.00</button>
+                    </div>
+                    <div class="col-md-1 p-1">
+                        <button (click)="indexTab = 2" class="btn-brown rounded border border-0">Buy</button>
+                    </div>
+                </div>
+            </div>
+           
+        </section>
+    </section>
+    <section *ngIf="indexTab === 2">
+        <div class="border border-black bg-white container-fluid">
+            <div class="text-center">
+                <i class="bi bi-dot"></i>
+                <i class="bi bi-dot"></i>
+                <i class="bi bi-dot"></i>
+                <i class="bi bi-dot"></i>
+            </div>
+            <h2 class="text-center">Haircut Adult Giftcard</h2>
+            <div class="row">
+                <div class="col-sm-4 pt-4 text-center">
+                    <button (click)="indexTab = 2" class="rounded bglightGrey mb-2 giftBtnSelect"><i class="bi bi-person-fill"></i>Yourself</button><br>
+                    <button (click)="indexTab = 3" class="rounded giftBtnSelect"><i class="bi bi-gift-fill"></i>Someone</button>
+                </div>
+                <div class="col-sm-8 p-4">
+                    <div class="bgLightWhite p-4">
+                        <div>
+                            <label class="lh-lg" for="quantity">Quantity</label><br>
+                            <input type="text" class="rounded w100 mb-3">
+                        </div>
+                        <div>
+                            <label class="lh-lg" for="name">Your Name</label><br>
+                            <input type="text" class="rounded w100 mb-4">
+                        </div>
+                        <div class="mb-3">
+                            <button class="w50 rounded"><i class="bi bi-envelope-fill px-3"></i>By Email</button>
+                            <button class="w50 rounded"><i class="bi bi-printer-fill px-3"></i>Print</button>
+                        </div>
+                        <div>
+                            <label class="lh-lg" for="email">What Email Address should be sent gift card to?</label><br>
+                            <input type="text" class="rounded w100 mb-4">
+                        </div>
+                        <div>
+                            <button (click)="indexTab = 4" class="text-white bgDarkBrown buttonRounded w100">Continue</button>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section *ngIf="indexTab === 3">
+        <div class="border border-black bg-white container-fluid">
+            <div class="text-center">
+                <i class="bi bi-dot"></i>
+                <i class="bi bi-dot"></i>
+                <i class="bi bi-dot"></i>
+                <i class="bi bi-dot"></i>
+            </div>
+            <h2 class="text-center">Haircut Adult Giftcard</h2>
+            <div class="row">
+                <div class="col-sm-4 pt-4 text-center">
+                    <button (click)="indexTab = 2" class="rounded mb-2 giftBtnSelect"><i class="bi bi-person-fill"></i>Yourself</button><br>
+                    <button (click)="indexTab = 3" class="rounded bglightGrey giftBtnSelect"><i class="bi bi-gift-fill"></i>Someone</button>
+                </div>
+                <div class="col-sm-8 p-4">
+                    <div class="bgLightWhite p-4">
+                        <div>
+                            <label class="lh-lg" for="quantity">Quantity</label><br>
+                            <input type="text" class="rounded w100 mb-3">
+                        </div>
+                        <div>
+                            <label class="lh-lg" for="name">Your Name</label><br>
+                            <input type="text" class="rounded w100 mb-3">
+                        </div>
+                        <div>
+                            <label class="lh-lg" for="receipent">Receipent Name</label><br>
+                            <input type="text" class="rounded w100 mb-3">
+                        </div>
+                        <div>
+                            <label class="lh-lg" for="receipent">Message</label><br>
+                            <textarea id="w3review"  class="rounded w100 mb-4" name="w3review" rows="4" cols="50"></textarea>
+                            <!-- <input type="text" class="rounded w100 mb-3"> -->
+                        </div>
+                       
+                        <div class="mb-3">
+                            <button class="w50 rounded"><i class="bi bi-envelope-fill px-3"></i>By Email</button>
+                            <button class="w50 rounded"><i class="bi bi-printer-fill px-3"></i>Print</button>
+                        </div>
+                        <div>
+                            <label class="lh-lg" for="email">What Email Address should be sent gift card to?</label><br>
+                            <input type="text" class="rounded w100 mb-4">
+                        </div>
+                        <div>
+                            <button (click)="indexTab = 4" class="text-white bgDarkBrown buttonRounded w100">Continue</button>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section *ngIf="indexTab === 4">
+        <div class="border border-black bg-white container-fluid">
+            <div class="text-center">
+                <i class="bi bi-dot"></i>
+                <i class="bi bi-dot"></i>
+                <i class="bi bi-dot"></i>
+                <i class="bi bi-dot"></i>
+            </div>
+            <h2 class="text-center">Order Summary</h2>
+            <section class="bg-white">
+                <div class="border-bottom border-black">
+                    <div class="row p-2">
+                        <div class="col-md-10">
+                            <h3>Haircut Adult gift card</h3>
+                            <p>Your Name: Ajay</p>
+                        </div>
+                        <div class="col-md-1 p-1">
+                            <p class="text-black">$30.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-bottom border-black">
+                    <div class="row p-2">
+                        <div class="col-md-10">
+                            <h3>Shipping</h3>
+                            <p>ByEmail:dheerajdhankhar5@gmail.com</p>
+                        </div>
+                        <div class="col-md-1 p-1">
+                            <p class="text-black">$10.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-bottom border-black">
+                    <div class="row p-2">
+                        <div class="col-md-10">
+                            <h3>Shipping</h3>
+                        </div>
+                        <div class="col-md-1 p-1">
+                            <p class="text-black">$2.90</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-bottom border-black">
+                    <div class="row p-2">
+                        <div class="col-md-10">
+                            <h3>Tip</h3>
+                        </div>
+                        <div class="col-md-1 p-1">
+                            <p class="text-black">$30.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-2">
+                    <div class="col-md-10">
+                        <h3>Total</h3>
+                    </div>
+                    <div class="col-md-1 p-1">
+                        <p class="text-black">$300.00</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="border border-secondary-subtle w50 text-center h-60">
+                            <div class="m-t-10">
+                                <input type="checkbox" class="btn-checkbox"><span class="p-2">Verify you are human</span>
+                                <img src="./../../../../assets/images/services/Rectangle 403.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-t-20">
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="border border-secondary-subtle w50 text-center h-60">
+                            <div class="m-t-10">
+                                <p>Card Number</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="border border-secondary-subtle w50 text-center h-60">
+                            <div class="m-t-10">
+                                <p>MM/YY <span>CVV</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row py-4">
+                    <div class="col-12 d-flex justify-content-center">
+                            <button class="w50 text-white bgDarkBrown buttonRounded w100">Pay Now</button>
+                    </div>
+                </div>
+                
+            </section>
+        </div>
+    </section>
+
+    <section class="border border-black bg-white container-fluid">
+        <div class="row text-center py-3">
+            <div class="text-center" *ngIf="!checkBalance">
+                <h4>Check Your Gift Card Balance <a (click)="checkBalance = true" class="text-decoration-none">here</a></h4>
+            </div>
+            <div class="input-group" *ngIf="checkBalance">
+                <input type="text" class="form-control bgSelect" placeholder="Enter your Gift Card Code..." aria-describedby="basic-addon2">
+                <span (click)="checkBalance = false" class="input-group-text btn-brown" id="basic-addon2">Check balance</span>
+            </div>
+        </div>
+    </section>
+    
+</section>

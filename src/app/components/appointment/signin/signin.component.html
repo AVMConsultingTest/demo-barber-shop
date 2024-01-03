@@ -1,0 +1,80 @@
+<section class="bgLightWhite">
+    <ul class="list-unstyled fs-2">
+        <li class="border-bottom border-2 border-dark d-flex justify-content-between p-3">
+            <i class="bi bi-chevron-left"></i>
+           <span>
+            Sign In
+           </span> <i class="bi bi-chevron-right" ></i>
+        </li>
+        <li class="border-bottom border-2 border-dark p-3 text-center" >
+            <div class="row">
+                <h3 class="text-center h1-font">Sign In With 
+                    <img class="p-b-10" src="./../../../../assets/images/appointment/appointment7.png">
+                    <img class="p-b-10"  src="./../../../../assets/images/appointment/appointment8.png">
+                </h3>
+                <div class="col-12 m-t-20">
+                    <div>
+                        <input class="w50 colorLightBrown bg-transparent" placeholder="Enter Name" type="text" [(ngModel)]="name" value="Name">
+                    </div>
+                    <div>
+                        <input class="w50 colorLightBrown bg-transparent" placeholder="Enter Phone Number" type="text"  [(ngModel)]="phone" value="Phone">
+                    </div>
+                    <div>
+                        <input class="w50 colorLightBrown bg-transparent" placeholder="Enter Email Id" type="text"  [(ngModel)]="email" value="Email">
+                    </div>
+                </div>
+                <div class="colorLightBrown">
+                    <input type="checkbox bg-transparent" style="width: 25px;height: 25px;">
+                    <span class="fs-4 m-l-20">Sign up to our mailing list</span>
+                </div>
+                <div class="m-t-50">
+                    <button class="text-white bgDarkBrown buttonRounded" (click)="requestBooking()"
+                        data-bs-toggle="modal" data-bs-target="#bookingModal">Request Booking</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+<section class="bookingModal">
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content bgSelect">
+            <div class="modal-header border-bottom-0">
+                <h5 class="modal-title">Booking Notification</h5>
+                <button class="bg-transparent" type="button"><i class="bi bi-question-circle-fill"></i>Help</button>
+            </div>
+            <div class="modal-body p-4">
+                <div class="border p-4">
+                    <div>
+                        <h4>Email</h4>
+                        <div>
+                            <button (click)="selectEmail = 0" class="m-r-10 bgGreen w50p" *ngIf="selectEmail === 1">ON</button>
+                            <button (click)="selectEmail = 1" class="m-r-10 bgDanger w50p" *ngIf="selectEmail === 0">OFF</button>
+                            <button class="bgLightGreen w50p">To</button><input type="text" aria-label="Enter Email Id">
+                            <p>* Sent for all booking events</p>
+                        </div>
+                    </div>
+                   <div>
+                    <h4>SMS (Text Message)</h4>
+                        <div>
+                            <button (click)="selectSMS = 0" class="m-r-10 bgGreen w50p" *ngIf="selectSMS === 1">ON</button>
+                            <button (click)="selectSMS = 1" class="m-r-10 bgDanger w50p" *ngIf="selectSMS === 0">OFF</button>
+                            <button class="bgLightGreen w50p">To</button><input type="text">
+                            <p>* Sent for booking reminder only</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p>In publishing and graphic design, Lorem ipsum is a placeholder text
+                            <a class="text-blue" data-bs-dismiss="modal" (click)="routerRedirect('/terms')">Terms and conditions</a> & <a class="text-blue" data-bs-dismiss="modal" (click)="routerRedirect('/privacy')"> privacy policy</a>
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="modal-footer justify-content-center border-top-0">
+              <button type="button" (click)="routerRedirect('appointment/services/8')" class="text-white bgDarkBrown buttonRounded" data-bs-dismiss="modal">Continue</button>
+            </div>
+         </div>
+        </div>
+    </div>
+</section>

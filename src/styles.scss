@@ -1,0 +1,153 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+body{
+    background-color: #655b58 !important;
+}
+
+
+$spaceamounts: (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100); 
+$sides: ( all ,top, bottom, left, right); // Leave this variable alone
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+  
+    .p-#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.cursorPointer{
+    cursor: pointer !important;
+}
+.w100{
+    width: 100% !important;
+}
+.w90{
+    width: 90%;
+}
+.w50{
+    width: 50% !important;
+}
+.w25{
+    width: 25% !important;
+}
+
+.h100{
+    height: 100% !important;
+}
+app-footer{
+    background-color: #474242 !important;
+}
+
+.text-justify{
+    text-align: justify !important;
+}
+.h-60{
+    height: 60px;
+}
+.h30{
+    height: 300px;
+}
+.colorYellow{
+    color: #d8e393;
+}
+.colorBgYellow{
+    background-color: #d8e393;
+}
+.bgDarkBrown{
+    background-color: #2c1811;
+}
+.bgWhite{
+    background-color: white !important;
+}
+.bgLightWhite{
+    background-color: #d9d9d9 !important;
+}
+.bgBlue{
+    background-color: #0beaf9 !important;
+}
+.bgOpaque{
+    background-color: #262222 !important;
+}
+.colorLightBrown{
+    color: #888888;
+}
+.bgLemon{
+    color: #D8E392;
+}
+.p-font{
+    font-family: cursive;
+    color: white;
+    font-size: 28px;
+}
+.btn-darkBrown{
+    border: 2px solid #2c1811;
+    color: #2c1811;
+    background-color: transparent;
+}
+.btn-darkBrown:hover,.btn-brown{
+    border: 2px solid #2c1811;
+    color: white;
+    background-color: #655b58 !important;
+}
+.buttonRounded{
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.bgSelect{
+    background-color: #d9d9d9 !important;
+}
+.bgLightGreen {
+    background-color: lightgreen !important;
+}
+.bgGreen {
+    background-color: #179c45 !important;
+}
+.w50p{
+    width: 50px !important;
+}
+.bgDanger{
+    background-color: #dc3444 !important;
+}
+.centerBoxContainer{
+    margin: auto;
+    width: 50% !important;
+}
+.bgBlueDark{
+    background-color: #0021f5;
+}
+.bglightGrey{
+    background-color: #655B58;
+}
+.bglightBrown {
+    background-color: #c39586;
+}
+.bgNon{
+    background: none !important;
+}
+.borderNone{
+    border: none !important;
+}
+.br5p{
+    border-radius: 5px !important;
+}
+.flex{
+    display: flex !important;
+}

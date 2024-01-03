@@ -1,0 +1,25 @@
+.headerSection{
+    background-image: url('./../../../assets/images/header/headerbg.png');
+    background-size: cover;
+}
+.headerLink{
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    line-height: 10px;
+    width: max-content;
+    padding: 10px;
+}
+.headerLink.selected{
+    color: white;
+    border-radius: 15px;
+    border-color: white;
+    border: 1px solid;
+    margin: -1px;
+}
+.headerLink:hover, .headerLink.selected:hover{
+    color: black;
+    border-radius: 15px;
+    border-color: white;
+    background-color: white;
+}

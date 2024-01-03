@@ -1,0 +1,863 @@
+<section class="bgLightWhite" *ngIf="selectedTab == 'service'">
+    <ul class="list-unstyled fs-2">
+        <li class="border-bottom border-2 border-dark d-flex justify-content-between p-3">
+            <button class="bgNon borderNone" disabled>
+                <i class="bi bi-chevron-left"  ></i>
+           </button>
+            
+           <span>
+               Service 
+           </span >
+           <button class="bgNon borderNone" [disabled]="!bookingDetails.service" (click)="redirect('serviceDetails')">
+                <i class="bi bi-chevron-right"></i>
+           </button>
+        </li>
+        <li class="border-bottom border-2 border-dark p-3" (click)="selectService(service)" *ngFor="let service of services">
+            {{service}}
+        </li>
+    </ul>
+</section>
+<section class="bgLightWhite" *ngIf="selectedTab == 'serviceDetails'">
+    <ul class="list-unstyled fs-2">
+        <li class="border-bottom border-2 border-dark d-flex justify-content-between p-3">
+            <i class="bi bi-chevron-left" (click)="redirect('service')"></i>
+           <span>
+               Service Details
+           </span> 
+           <button class="bgNon borderNone" [disabled]="!bookingDetails.serviceDetails" (click)="selectServiceDetails(bookingDetails.serviceDetails)">
+                <i class="bi bi-chevron-right"></i>
+           </button>
+           <!-- <i class="bi bi-chevron-right" (click)="redirect(3)"></i> -->
+        </li>
+        <li class="border-bottom border-2 border-dark p-3" (click)="selectServiceDetails(bookingDetails.serviceDetails)">
+           <div class="row">
+            <div class="col-sm-2">
+                <img src="./../../../../assets/images/appointment/appointment5.png" alt="">
+            </div>
+            <div class="col-sm-10">
+                <h2>{{bookingDetails.service}} (@john_carter</h2>
+                <p class="fs-6"><span class="borderPrice border border-dark">1hr 15m - 1hr 20m / $60</span></p>
+                <p class="fs-6 text-justify">
+                    In publishing and graphic design, Lorem ipsum is a placeholder text 
+                    commonly used to demonstrate the visual form of a document or a typeface without 
+                    relying on meaningful content. Lorem ipsum may be used as a placeholder before final 
+                    copy is availableIn publishing and graphic design, Lorem ipsum is a placeholder text 
+                    commonly used to demonstrate the visual form of a document or a typeface without relying on 
+                    meaningful content. Lorem ipsum may be used 
+                </p>
+                
+            </div>
+           </div>
+        </li>
+        <li class="border-bottom border-2 border-dark p-3" (click)="selectServiceDetails(bookingDetails.serviceDetails)">
+            <div class="row">
+                <div class="col-sm-10">
+                    <h2>{{bookingDetails.service}} (@john_carter</h2>
+                    <p class="fs-6"><span class="borderPrice border border-dark">1hr 15m - 1hr 20m / $60</span></p>
+                    <p class="fs-6 text-justify">
+                        In publishing and graphic design, Lorem ipsum is a placeholder text 
+                        commonly used to demonstrate the visual form of a document or a typeface without 
+                        relying on meaningful content. Lorem ipsum may be used as a placeholder before final 
+                        copy is availableIn publishing and graphic design, Lorem ipsum is a placeholder text 
+                        commonly used to demonstrate the visual form of a document or a typeface without relying on 
+                        meaningful content. Lorem ipsum may be used 
+                    </p>
+                </div>
+                <div class="col-sm-2">
+                    <img src="./../../../../assets/images/appointment/appointment5.png" alt="">
+                </div>
+               </div>
+        </li>
+        <li class="border-bottom border-2 border-dark p-3" (click)="selectServiceDetails(bookingDetails.serviceDetails)">
+            <div class="row">
+                <div class="col-sm-2">
+                    <img src="./../../../../assets/images/appointment/appointment5.png" alt="">
+                </div>
+                <div class="col-sm-10">
+                    <h2>{{bookingDetails.service}} (@john_carter</h2>
+                    <p class="fs-6"><span class="borderPrice border border-dark">1hr 15m - 1hr 20m / $60</span></p>
+                    <p class="fs-6 text-justify">
+                        In publishing and graphic design, Lorem ipsum is a placeholder text 
+                        commonly used to demonstrate the visual form of a document or a typeface without 
+                        relying on meaningful content. Lorem ipsum may be used as a placeholder before final 
+                        copy is availableIn publishing and graphic design, Lorem ipsum is a placeholder text 
+                        commonly used to demonstrate the visual form of a document or a typeface without relying on 
+                        meaningful content. Lorem ipsum may be used 
+                    </p>
+                </div>
+               </div>
+        </li>
+        <li class="border-bottom border-2 border-dark p-3" (click)="selectServiceDetails(bookingDetails.serviceDetails)">
+            <div class="row">
+                <div class="col-sm-10">
+                    <h2>{{bookingDetails.service}} (@john_carter</h2>
+                    <p class="fs-6"><span class="borderPrice border border-dark">1hr 15m - 1hr 20m / $60</span></p>
+                    <p class="fs-6 text-justify">
+                        In publishing and graphic design, Lorem ipsum is a placeholder text 
+                        commonly used to demonstrate the visual form of a document or a typeface without 
+                        relying on meaningful content. Lorem ipsum may be used as a placeholder before final 
+                        copy is availableIn publishing and graphic design, Lorem ipsum is a placeholder text 
+                        commonly used to demonstrate the visual form of a document or a typeface without relying on 
+                        meaningful content. Lorem ipsum may be used 
+                    </p>
+                </div>
+                <div class="col-sm-2">
+                    <img src="./../../../../assets/images/appointment/appointment5.png" alt="">
+                </div>
+               </div>
+        </li>
+        <li class="border-bottom border-2 border-dark p-3" (click)="selectServiceDetails(bookingDetails.serviceDetails)">
+            <div class="row">
+                <div class="col-sm-2">
+                    <img src="./../../../../assets/images/appointment/appointment5.png" alt="">
+                </div>
+                <div class="col-sm-10">
+                    <h2>{{bookingDetails.service}} (@john_carter</h2>
+                    <p class="fs-6"><span class="borderPrice border border-dark">1hr 15m - 1hr 20m / $60</span></p>
+                    <p class="fs-6 text-justify">
+                        In publishing and graphic design, Lorem ipsum is a placeholder text 
+                        commonly used to demonstrate the visual form of a document or a typeface without 
+                        relying on meaningful content. Lorem ipsum may be used as a placeholder before final 
+                        copy is availableIn publishing and graphic design, Lorem ipsum is a placeholder text 
+                        commonly used to demonstrate the visual form of a document or a typeface without relying on 
+                        meaningful content. Lorem ipsum may be used 
+                    </p>
+                </div>
+               </div>
+        </li>
+        <li class="border-bottom border-2 border-dark p-3" (click)="selectServiceDetails(bookingDetails.serviceDetails)">
+            <div class="row">
+                <div class="col-sm-10">
+                    <h2>{{bookingDetails.service}} (@john_carter</h2>
+                    <p class="fs-6"><span class="borderPrice border border-dark">1hr 15m - 1hr 20m / $60</span></p>
+                    <p class="fs-6 text-justify">
+                        In publishing and graphic design, Lorem ipsum is a placeholder text 
+                        commonly used to demonstrate the visual form of a document or a typeface without 
+                        relying on meaningful content. Lorem ipsum may be used as a placeholder before final 
+                        copy is availableIn publishing and graphic design, Lorem ipsum is a placeholder text 
+                        commonly used to demonstrate the visual form of a document or a typeface without relying on 
+                        meaningful content. Lorem ipsum may be used 
+                    </p>
+                </div>
+                <div class="col-sm-2">
+                    <img src="./../../../../assets/images/appointment/appointment5.png" alt="">
+                </div>
+               </div>
+        </li>
+        <li class="border-bottom border-2 border-dark p-3" (click)="selectServiceDetails(bookingDetails.serviceDetails)">
+            <div class="row">
+                <div class="col-sm-2">
+                    <img src="./../../../../assets/images/appointment/appointment5.png" alt="">
+                </div>
+                <div class="col-sm-10">
+                    <h2>{{bookingDetails.service}} (@john_carter</h2>
+                    <p class="fs-6"><span class="borderPrice border border-dark">1hr 15m - 1hr 20m / $60</span></p>
+                    <p class="fs-6 text-justify">
+                        In publishing and graphic design, Lorem ipsum is a placeholder text 
+                        commonly used to demonstrate the visual form of a document or a typeface without 
+                        relying on meaningful content. Lorem ipsum may be used as a placeholder before final 
+                        copy is availableIn publishing and graphic design, Lorem ipsum is a placeholder text 
+                        commonly used to demonstrate the visual form of a document or a typeface without relying on 
+                        meaningful content. Lorem ipsum may be used 
+                    </p>
+                </div>
+               </div>
+        </li>
+    </ul>
+</section>
+
+<section class="bgLightWhite" *ngIf="selectedTab == 'availability' ">
+    <ul class="list-unstyled fs-2">
+        <li class="border-bottom border-2 border-dark d-flex justify-content-between p-3">
+            <i class="bi bi-chevron-left" (click)="redirect('serviceDetails')"></i>
+           <span>
+               Availability 
+           </span> 
+           <button class="bgNon borderNone" [disabled]="!bookingDetails.barberDetails" (click)="redirect('terms')">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+           <!-- <i class="bi bi-chevron-right" (click)="redirect(4)"></i> -->
+        </li>
+        <li class="border-bottom border-2 border-dark p-3 text-center">
+            <div class="row">
+                <div class="col-sm-5">
+                    <span class="fs-3 m-r-20">Select Barber</span>
+                    <select class="fs-5 w50">
+                        <option selected>ALL</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    OR
+                </div>
+                <div class="col-sm-5 text-center" >
+                    <button class="text-white bgDarkBrown buttonRounded" (click)="redirect('calendar')" >View Calendar</button>
+                </div>
+            </div>
+        </li>
+        <li class="border-bottom border-2 border-dark p-3" *ngFor="let item of barberDetailsList" (click)="selectBarber(item)">
+            <h5>
+                Today w/ {{item.barberDetails}} @ {{item.bookingTime}}
+            </h5>
+            <p class="fs-6">
+                {{item.bookingDate}}
+            </p>
+        </li>
+    </ul>
+</section>
+
+<section class="bgLightWhite" *ngIf="selectedTab == 'calendar'">
+    <ul class="list-unstyled fs-2">
+        <li class="border-bottom border-2 border-dark d-flex justify-content-between p-3">
+            <i class="bi bi-chevron-left" (click)="redirect('availability')"></i>
+           <span>
+               Choose A Day? 
+           </span> 
+           <button class="bgNon borderNone" [disabled]="!bookingDetails.bookingDate" (click)="redirect('barber')">
+            <i class="bi bi-chevron-right"></i>
+           </button>
+        </li>
+        <li class="border-bottom border-2 border-dark p-3 text-center" >
+            <div class="flex justify-content-center">
+                <p-calendar class="max-w-full" dateFormat="dd.mm.yy" (onSelect)="selectDate()" [(ngModel)]="bookingDate" [inline]="true" ></p-calendar>
+            </div>
+            
+        </li>
+    </ul>
+</section>
+
+<section class="bgLightWhite" *ngIf="selectedTab == 'barber'">
+    <ul class="list-unstyled fs-2">
+        <li class="border-bottom border-2 border-dark d-flex justify-content-between p-3">
+            <i class="bi bi-chevron-left" (click)="redirect('calendar')"></i>
+           <span>
+               Choose A Barber 
+           </span> 
+           <button class="bgNon borderNone" [disabled]="!bookingDetails.barberDetails" (click)="redirect('timer')">
+            <i class="bi bi-chevron-right"></i>
+           </button>
+        </li>
+        <li class="border-bottom border-2 border-dark p-3" (click)="selectBarberName('John Carter (@john_carter')">
+           <div class="row">
+            <div class="col-sm-2 text-center">
+                <img  class="w100" src="./../../../../assets/images/appointment/appointment5.png" alt="">
+            </div>
+            <div class="col-sm-8">
+                <h2>John Carter (@john_carter</h2>
+                <!-- <p class="fs-6"><span class="borderPrice border border-dark">1hr 15m - 1hr 20m / $60</span></p> -->
+                <p class="fs-6 text-justify">
+                    In publishing and graphic design, Lorem ipsum is a placeholder text 
+                    commonly used to demonstrate the visual form of a document or a typeface without 
+                    relying on meaningful content. Lorem ipsum may be used as a placeholder before final 
+                    copy is availableIn publishing and graphic design, Lorem ipsum is a placeholder text 
+                    commonly used to demonstrate the visual form of a document or a typeface without relying on 
+                    meaningful content. Lorem ipsum may be used 
+                </p>
+            </div>
+            <div class="col-sm-2 d-flex align-items-center justify-content-between">
+                <button class="badge">
+                    20$
+                </button>
+                <i class="bi bi-info-circle-fill icon-blue"></i>
+            </div>
+           </div>
+        </li>
+        <li class="border-bottom border-2 border-dark p-3" (click)="selectBarberName('John Carter (@john_carter')">
+            <div class="row">
+                <div class="col-sm-2 d-flex align-items-center justify-content-between">
+                    <button class="badge">
+                        20$
+                    </button>
+                    <i class="bi bi-info-circle-fill icon-blue"></i>
+                </div>
+                <div class="col-sm-8">
+                    <h2>John Carter (@john_carter</h2>
+                    <p class="fs-6 text-justify">
+                        In publishing and graphic design, Lorem ipsum is a placeholder text 
+                        commonly used to demonstrate the visual form of a document or a typeface without 
+                        relying on meaningful content. Lorem ipsum may be used as a placeholder before final 
+                        copy is availableIn publishing and graphic design, Lorem ipsum is a placeholder text 
+                        commonly used to demonstrate the visual form of a document or a typeface without relying on 
+                        meaningful content. Lorem ipsum may be used 
+                    </p>
+                </div>
+                <div class="col-sm-2 text-center">
+                    <img class="w100" src="./../../../../assets/images/appointment/appointment5.png" alt="">
+                </div>
+               </div>
+        </li>
+        <li class="border-bottom border-2 border-dark p-3" (click)="selectBarberName('John Carter (@john_carter')">
+            <div class="row">
+                <div class="col-sm-2 text-center">
+                    <img  class="w100" src="./../../../../assets/images/appointment/appointment5.png" alt="">
+                </div>
+                <div class="col-sm-8">
+                    <h2>John Carter (@john_carter</h2>
+                    <!-- <p class="fs-6"><span class="borderPrice border border-dark">1hr 15m - 1hr 20m / $60</span></p> -->
+                    <p class="fs-6 text-justify">
+                        In publishing and graphic design, Lorem ipsum is a placeholder text 
+                        commonly used to demonstrate the visual form of a document or a typeface without 
+                        relying on meaningful content. Lorem ipsum may be used as a placeholder before final 
+                        copy is availableIn publishing and graphic design, Lorem ipsum is a placeholder text 
+                        commonly used to demonstrate the visual form of a document or a typeface without relying on 
+                        meaningful content. Lorem ipsum may be used 
+                    </p>
+                </div>
+                <div class="col-sm-2 d-flex align-items-center justify-content-between">
+                    <button class="badge">
+                        20$
+                    </button>
+                    <i class="bi bi-info-circle-fill icon-blue"></i>
+                </div>
+               </div>
+        </li>
+        <li class="border-bottom border-2 border-dark p-3" (click)="selectBarberName('John Carter (@john_carter')">
+            <div class="row">
+                <div class="col-sm-2 d-flex align-items-center justify-content-between">
+                    <button class="badge">
+                        20$
+                    </button>
+                    <i class="bi bi-info-circle-fill icon-blue"></i>
+                </div>
+                <div class="col-sm-8">
+                    <h2>John Carter (@john_carter</h2>
+                    <p class="fs-6 text-justify">
+                        In publishing and graphic design, Lorem ipsum is a placeholder text 
+                        commonly used to demonstrate the visual form of a document or a typeface without 
+                        relying on meaningful content. Lorem ipsum may be used as a placeholder before final 
+                        copy is availableIn publishing and graphic design, Lorem ipsum is a placeholder text 
+                        commonly used to demonstrate the visual form of a document or a typeface without relying on 
+                        meaningful content. Lorem ipsum may be used 
+                    </p>
+                </div>
+                <div class="col-sm-2 text-center">
+                    <img class="w100" src="./../../../../assets/images/appointment/appointment5.png" alt="">
+                </div>
+               </div>
+        </li>
+        <li class="border-bottom border-2 border-dark p-3" (click)="selectBarberName('John Carter (@john_carter')">
+            <div class="row">
+                <div class="col-sm-2 text-center">
+                    <img  class="w100" src="./../../../../assets/images/appointment/appointment5.png" alt="">
+                </div>
+                <div class="col-sm-8">
+                    <h2>John Carter (@john_carter</h2>
+                    <!-- <p class="fs-6"><span class="borderPrice border border-dark">1hr 15m - 1hr 20m / $60</span></p> -->
+                    <p class="fs-6 text-justify">
+                        In publishing and graphic design, Lorem ipsum is a placeholder text 
+                        commonly used to demonstrate the visual form of a document or a typeface without 
+                        relying on meaningful content. Lorem ipsum may be used as a placeholder before final 
+                        copy is availableIn publishing and graphic design, Lorem ipsum is a placeholder text 
+                        commonly used to demonstrate the visual form of a document or a typeface without relying on 
+                        meaningful content. Lorem ipsum may be used 
+                    </p>
+                </div>
+                <div class="col-sm-2 d-flex align-items-center justify-content-between">
+                    <button class="badge">
+                        20$
+                    </button>
+                    <i class="bi bi-info-circle-fill icon-blue"></i>
+                </div>
+               </div>
+        </li>
+        <li class="border-bottom border-2 border-dark p-3" (click)="selectBarberName('John Carter (@john_carter')">
+            <div class="row">
+                <div class="col-sm-2 d-flex align-items-center justify-content-between">
+                    <button class="badge">
+                        20$
+                    </button>
+                    <i class="bi bi-info-circle-fill icon-blue"></i>
+                </div>
+                <div class="col-sm-8">
+                    <h2>John Carter (@john_carter</h2>
+                    <p class="fs-6 text-justify">
+                        In publishing and graphic design, Lorem ipsum is a placeholder text 
+                        commonly used to demonstrate the visual form of a document or a typeface without 
+                        relying on meaningful content. Lorem ipsum may be used as a placeholder before final 
+                        copy is availableIn publishing and graphic design, Lorem ipsum is a placeholder text 
+                        commonly used to demonstrate the visual form of a document or a typeface without relying on 
+                        meaningful content. Lorem ipsum may be used 
+                    </p>
+                </div>
+                <div class="col-sm-2 text-center">
+                    <img class="w100" src="./../../../../assets/images/appointment/appointment5.png" alt="">
+                </div>
+               </div>
+        </li>
+        <li class="border-bottom border-2 border-dark p-3" (click)="selectBarberName('John Carter (@john_carter')">
+            <div class="row">
+                <div class="col-sm-2 text-center">
+                    <img  class="w100" src="./../../../../assets/images/appointment/appointment5.png" alt="">
+                </div>
+                <div class="col-sm-8">
+                    <h2>John Carter (@john_carter</h2>
+                    <!-- <p class="fs-6"><span class="borderPrice border border-dark">1hr 15m - 1hr 20m / $60</span></p> -->
+                    <p class="fs-6 text-justify">
+                        In publishing and graphic design, Lorem ipsum is a placeholder text 
+                        commonly used to demonstrate the visual form of a document or a typeface without 
+                        relying on meaningful content. Lorem ipsum may be used as a placeholder before final 
+                        copy is availableIn publishing and graphic design, Lorem ipsum is a placeholder text 
+                        commonly used to demonstrate the visual form of a document or a typeface without relying on 
+                        meaningful content. Lorem ipsum may be used 
+                    </p>
+                </div>
+                <div class="col-sm-2 d-flex align-items-center justify-content-between">
+                    <button class="badge">
+                        20$
+                    </button>
+                    <i class="bi bi-info-circle-fill icon-blue"></i>
+                </div>
+               </div>
+        </li>
+    </ul>
+</section>
+
+<section class="bgLightWhite" *ngIf="selectedTab == 'timer'">
+    <ul class="list-unstyled fs-2">
+        <li class="border-bottom border-2 border-dark d-flex justify-content-between p-3">
+            <i class="bi bi-chevron-left" (click)="redirect('barber')"></i>
+           <span>
+               Best Time For You? 
+           </span> 
+           <button class="bgNon borderNone" [disabled]="!bookingDetails.bookingTime" (click)="redirect('terms')">
+            <i class="bi bi-chevron-right"></i>
+           </button>
+        </li>
+        <li class="border-bottom border-2 border-dark p-3 text-center" >
+            <div class="row">
+                <div class="col-md-4">
+                    <button class="text-white bgDarkBrown rounded m-b-30">Morning</button>
+                    <div *ngFor="let tim of time.morning">
+                        <button class="btn-darkBrown text-center rounded m-b-20" (click)="selectTime(tim)">{{tim}}</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <button class="text-white bgDarkBrown rounded m-b-30">Afternoon</button>
+                    <div *ngFor="let tim of time.afternoon">
+                        <button class="btn-darkBrown text-center rounded m-b-20" (click)="selectTime(tim)">{{tim}}</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <button class="text-white bgDarkBrown rounded m-b-30">Evening</button>
+                    <div *ngFor="let tim of time.evening">
+                        <button class="btn-darkBrown text-center rounded m-b-20" (click)="selectTime(tim)">{{tim}}</button>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+
+
+
+<section class="bgLightWhite" *ngIf="selectedTab == 'terms' ">
+    <ul class="list-unstyled fs-2">
+        <li class="border-bottom border-2 border-dark d-flex justify-content-between p-3">
+            <i class="bi bi-chevron-left" (click)="redirect('availability')"></i>
+           <span>
+               Booking Policy
+           </span >
+           <button class="bgNon borderNone" [disabled]="!bookingDetails.service" (click)="redirect('confirmDetails')">
+                <i class="bi bi-chevron-right"></i>
+           </button>
+        </li>
+        <li class="border-bottom border-2 border-dark p-3">
+            <h3> Booking Cancellation Policy</h3>
+            <p class="fs-6 text-justify">
+                We want to give every client the time and attention that you deserve for your service. 
+                We understand that sometimes circumstances arise and you need to make adjustments to your plans. 
+                If you must cancel or rebook your appointment, we respectfully request at least 12 hours notice.
+            </p>
+            <p class="fs-6 text-justify">
+                Cancellations or missed appointments without 12-hour notice will result in a charge of part or all of the service amount.
+            </p>
+            <p class="fs-6 text-justify">
+                Please understand that your appointment time was set aside just for you. 
+                Appointments made within the barbershop mean that we’ve reserved space and a barber/braider, 
+                specifically for you. Appointment dates for services help us to make sure that clients don’t 
+                miss the opportunity to receive services & minimize wait time. So, we want to make sure that 
+                everyone is available to fill that appointment time.
+            </p>
+            <p class="fs-6 text-justify">
+                If you cancel your appointment without giving at least 12 hours' notice prior to your appointment 
+                will result in a charge of 50% of the service amount. Any “no shows” will be charged 100% 
+                of the service amount.
+            </p>
+            <p class="fs-6 text-justify">
+                Depending on the services booked, in the case of multiple services at a single appointment, 
+                a cancellation without 12-hour notice will result in a charge of 100% of the primary service 
+                amount and 50% of any additional service amount.
+            </p>
+            <p class="fs-6 text-justify">
+                The cancellation fee and any service fee will be charged on your next visit and will require 
+                your credit card on file for future bookings.
+            </p>
+            <p class="fs-6 text-justify">
+                Our barbershop booking policy and haircut/braids cancellation policy is intended to ensure 
+                that we have the opportunity to fill any last-minute availability. We don’t want to make any 
+                clients on the waiting list miss their chance to book an appointment or receive a service. 
+                Please understand that we’re committed to offering you the highest possible level of service 
+                during your appointments with us.
+            </p>
+            <p class="fs-6 text-justify">
+                In order to help facilitate smooth booking and cancellations of appointments made within 
+                our website or resurva app, our barbershop requires a credit card on file when booking your 
+                service. For some of our services, we have a deposit cancellation policy. 
+                This deposit amount will be applied to the final total for your service, on your appointment 
+                dates.
+            </p>
+            <p class="fs-6 text-justify">
+                If you need to cancel because of a personal or medical emergency, please contact us as soon as possible, 
+                and we can decide how best to proceed.
+            </p>
+        </li>
+        <li class="border-bottom border-2 border-dark p-3" >
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <button class="text-white bgDarkBrown buttonRounded" (click)="redirect('confirmDetails')">Accept</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<section class="bgLightWhite" *ngIf="selectedTab == 'confirmDetails'">
+    <ul class="list-unstyled fs-2">
+        <li class="border-bottom border-2 border-dark d-flex justify-content-between p-3">
+            <i class="bi bi-chevron-left" (click)="redirect('terms')"></i>
+           <span>
+            Confirm your details
+           </span> <i class="bi bi-chevron-right" (click)="redirect('signin')"></i>
+        </li>
+        <li class="border-bottom border-2 border-dark p-3" >
+            <div class="row">
+                <div class="col-sm-8">
+                    <h2>{{bookingDetails.service}}</h2>
+                    <p class="fs-6 p-l-10">{{bookingDetails.bookingDate}}</p>
+                    <p class="fs-6 p-l-10">{{bookingDetails.barberDetails}}</p>
+                </div>
+                <div class="col-sm-4 text-end">
+                    <div>
+                        <button class="badge">{{bookingDetails.bookingTime}}</button>
+                    </div>
+                    <div>
+                        <button class="badge">{{bookingDetails.serviceDetails}}</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <button class="text-white bgDarkBrown buttonRounded" (click)="redirect('signin')">Continue</button>
+        </li>
+    </ul>
+</section>
+
+<section class="bgLightWhite"  *ngIf="selectedTab == 'signin'">
+    <ul class="list-unstyled fs-2">
+        <li class="border-bottom border-2 border-dark d-flex justify-content-between p-3">
+            <i class="bi bi-chevron-left" (click)="redirect('confirmDetails')"></i>
+           <span>
+            Sign In
+           </span> 
+           <button class="bgNon borderNone" [disabled]="userForm.form.invalid" >
+              <i class="bi bi-chevron-right"></i>
+           </button>
+        </li>
+        <li class="border-bottom border-2 border-dark p-3 text-center" >
+            <form #userForm="ngForm">
+            <div class="row">
+                <h3 class="text-center h1-font">Sign In With 
+                    <img class="p-b-10" src="./../../../../assets/images/appointment/appointment7.png">
+                    <img class="p-b-10"  src="./../../../../assets/images/appointment/appointment8.png">
+                </h3>
+                <div class="col-12 m-t-20">
+                    <div class="inputField">
+                        <div *ngIf="name.invalid && (name.dirty || name.touched)"
+                            class="errorValidation">
+                            <div *ngIf="name.errors?.['required']">
+                                Name is required.
+                            </div>
+                            <div *ngIf="name.errors?.['minlength']">
+                                Name must be at least 4 characters long.
+                            </div>
+                        </div>
+                        <input name="name" id="name" required  minlength="4" class="w50 border-dark fs-4 m-3 br5p p-2" placeholder="Enter Name" type="text" [(ngModel)]="bookingDetails.name"  #name="ngModel">
+                    </div>
+                    <div class="inputField">
+                        <div *ngIf="phone_number.invalid && (phone_number.dirty || phone_number.touched)"
+                            class="errorValidation">
+                            <div *ngIf="phone_number.errors?.['required']">
+                                Phone Number is required.
+                            </div>
+                        </div>
+                        <input name="phone_number" id="phone_number" required class="w50 border-dark fs-4 m-3 br5p p-2" placeholder="Enter Phone Number" type="number"  [(ngModel)]="bookingDetails.phone_number"  #phone_number="ngModel">
+                    </div>
+                    <div class="inputField">
+                        <div *ngIf="email.invalid && (email.dirty || email.touched)"
+                            class="errorValidation">
+                            <div *ngIf="email.errors?.['required']">
+                                Email is required.
+                            </div>
+                            <div *ngIf="email.errors?.['pattern']">
+                                Enter a Valid Email.
+                            </div>
+                            
+                        </div>
+                        <input required class="w50 border-dark fs-4 m-3 br5p p-2" placeholder="Enter Email Id" 
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+                        type="text"  name="email" id="email"  [(ngModel)]="bookingDetails.email"  #email="ngModel">
+                    </div>
+                </div>
+                <div class="colorLightBrown">
+                    <input type="checkbox" style="width: 25px;height: 25px;">
+                    <span class="fs-4 m-l-20">Sign up to our mailing list</span>
+                </div>
+                <div class="m-t-50">
+                    
+                    <button class="text-white bgDarkBrown buttonRounded" [disabled]="userForm.form.invalid"
+                        data-bs-toggle="modal" data-bs-target="#bookingModal">Request Booking</button>
+                </div>
+            </div>
+        </form>
+        </li>
+    </ul>
+</section>
+
+<section class="bookingModal">
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content bgSelect">
+            <div class="modal-header border-bottom-0">
+                <h5 class="modal-title">Booking Notification</h5>
+                <button class="bg-transparent" type="button"><i class="bi bi-question-circle-fill"></i>Help</button>
+            </div>
+            <div class="modal-body p-4">
+                <div class="border p-4">
+                    <div>
+                        <h4>Email</h4>
+                        <div>
+                            <button (click)="selectEmail = 0" class="m-r-10 bgGreen w50p" *ngIf="selectEmail === 1">ON</button>
+                            <button (click)="selectEmail = 1" class="m-r-10 bgDanger w50p" *ngIf="selectEmail === 0">OFF</button>
+                            <button class="bgLightGreen w50p">To</button>
+                            <input type="email" [(ngModel)]="bookingDetails.email" aria-label="Enter Email Id">
+                            <p>* Sent for all booking events</p>
+                        </div>
+                    </div>
+                   <div>
+                    <h4>SMS (Text Message)</h4>
+                        <div>
+                            <button (click)="selectSMS = 0" class="m-r-10 bgGreen w50p" *ngIf="selectSMS === 1">ON</button>
+                            <button (click)="selectSMS = 1" class="m-r-10 bgDanger w50p" *ngIf="selectSMS === 0">OFF</button>
+                            <button class="bgLightGreen w50p">To</button>
+                            <input [(ngModel)]="bookingDetails.phone_number" type="text">
+                            <p>* Sent for booking reminder only</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p>In publishing and graphic design, Lorem ipsum is a placeholder text
+                            <a class="text-blue" data-bs-dismiss="modal" (click)="routerRedirect('/terms')">Terms and conditions</a> & <a class="text-blue" data-bs-dismiss="modal" (click)="routerRedirect('/privacy')"> privacy policy</a>
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="modal-footer justify-content-center border-top-0">
+              <button type="button" (click)="requestBooking()" class="text-white bgDarkBrown buttonRounded" data-bs-dismiss="modal">Continue</button>
+            </div>
+         </div>
+        </div>
+    </div>
+</section>
+<section class="bgLightWhite" *ngIf="selectedTab == 'paymentProcess'">
+    <ul class="list-unstyled fs-2">
+        <li class="border-bottom border-2 border-dark text-center p-3">
+            <!-- <i class="bi bi-chevron-left" (click)="redirect(7)"></i> -->
+           <span>
+            Proceed To Pay
+           </span> 
+           <!-- <i class="bi bi-chevron-right" (click)="redirect(9)"></i> -->
+        </li>
+        <li class="border-bottom border-2 border-dark p-3" >
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="fs-6 p-l-10">To confirm your booking please proceed to pay</p>
+                    <p class="fs-6 p-l-10">In publishing and graphic design, Lorem ipsum is a placeholder 
+                        text In publishing and graphic design, Lorem ipsum is a placeholder textIn 
+                        publishing and graphic design, Lorem ipsum is a placeholder text
+                    </p>
+                    <p class="fs-6 p-l-10">To cancel your booking,Click <a (click)="redirect('cancel')" class="cursorPointer text-blue" > HERE</a></p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-12  text-center">
+                    <button class="text-white bgDarkBrown buttonRounded" (click)="proceedToPay()">Proceed To Payment</button>
+                </div>
+                <div class="col-sm-12 text-center"> OR </div>
+                <div class="col-sm-12  text-center">
+                    <button class="text-white bglightBrown buttonRounded" (click)="proceedToBookWithoutPay()">Pay Later</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+<section class="bgLightWhite" *ngIf="selectedTab == 'confirmed'">
+    <ul class="list-unstyled fs-2">
+        <li class="border-bottom border-2 border-dark text-center p-3">
+            <!-- <i class="bi bi-chevron-left" (click)="redirect(7)"></i> -->
+           <span>
+            Booking Confirmed
+           </span> 
+           <!-- <i class="bi bi-chevron-right" (click)="redirect(9)"></i> -->
+        </li>
+        <li class="border-bottom border-2 border-dark p-3" >
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="fs-6 p-l-10">Your booking at barber has been confirmed</p>
+                    <p class="fs-6 p-l-10">Click below button to download receipt
+                    </p>
+                    <p class="fs-6 p-l-10">To cancel your booking,Click <a (click)="redirect('cancel')" class="cursorPointer text-blue" > HERE</a></p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-12  text-center">`
+                    <button *ngIf="!payLater" class="text-white bgDarkBrown buttonRounded" (click)="downloadReceipt()">Download Receipt</button>
+                    <button *ngIf="payLater" class="text-white bgDarkBrown buttonRounded" (click)="downloadReceiptWithOutPay()">Download Receipt</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<section class="bgLightWhite" *ngIf="selectedTab == 'cancel'">
+    <ul class="list-unstyled fs-2">
+        <li class="border-bottom border-2 border-dark text-center p-3">
+            <!-- <i class="bi bi-chevron-left" (click)="redirect(7)"></i> -->
+           <span>
+            Please confirm your cancellation
+           </span> 
+           <!-- <i class="bi bi-chevron-right" (click)="redirect(7)"></i> -->
+        </li>
+        <li class="border-bottom border-2 border-dark p-3" >
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <button class="text-white bgDarkBrown buttonRounded" (click)="redirect('service')" data-bs-toggle="modal" data-bs-target="#exampleModal">CONFIRM CANCELLATION</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<section class="bgLightWhite" *ngIf="selectedTab == 11">
+    <ul class="list-unstyled fs-2">
+        <li class="border-bottom border-2 border-dark d-flex justify-content-center p-3">
+           <span>Create a New Account</span> 
+        </li>
+        <li class="border-bottom border-2 border-dark p-3" >
+            <div class="row">
+                <div class="col-12 m-t-20">
+                    <div class="centerBoxContainer">
+                        <div>
+                            <label class="">First Name</label>
+                            <input class="w100 colorLightBrown bg-transparent" type="text" value="">
+                        </div>
+                        <div class="lh-lg">
+                            <label class="">Last Name</label>
+                            <input class="w100 colorLightBrown bg-transparent" type="text" value="">
+                        </div>
+                        <div class="lh-lg">
+                            <label class="">Phone Number</label>
+                            <input class="w100 colorLightBrown bg-transparent" type="text" value="">
+                        </div>
+                        <div class="lh-lg">
+                            <label class="">Email</label>
+                            <input class="w100 colorLightBrown bg-transparent" type="text" value="">
+                        </div>
+                        <div class="lh-lg">
+                            <label class="">Password</label>
+                            <input class="w100 colorLightBrown bg-transparent" type="text" value="">
+                        </div>
+                        <p class="lh-lg">An activation link will send to your email</p>
+                    </div>
+                </div>
+                <div class="m-t-50 text-center">
+                    <button class="text-white bgDarkBrown buttonRounded">Sign Up</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<section class="bgLightWhite" *ngIf="selectedTab == 10">
+    <ul class="list-unstyled fs-2">
+        <li class="border-bottom border-2 border-dark d-flex justify-content-center p-3">
+           <span>Sign In</span> 
+        </li>
+        <li class="border-bottom border-2 border-dark p-3" >
+            <div class="row">
+                <h3 class="text-center h1-font">Sign In With 
+                    <img class="p-b-10" src="./../../../../assets/images/appointment/appointment7.png">
+                    <img class="p-b-10"  src="./../../../../assets/images/appointment/appointment8.png">
+                </h3>
+                <div class="col-12 m-t-20">
+                    <div class="centerBoxContainer">
+                        <div>
+                            <label class="">Email Address</label><br>
+                            <input class="w100 colorLightBrown bg-transparent" type="text" value="">
+                        </div>
+                        <div class="lh-lg">
+                            <label class="">Password</label><br>
+                            <input class="w100 colorLightBrown bg-transparent" type="text" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="m-t-50 text-center">
+                    <button class="text-white bgDarkBrown buttonRounded">Sign In</button>
+                </div>
+                <p class="d-flex justify-content-evenly">
+                    <a (click)="redirect(11)" class="cursorPointer fs-6 text-blue">Sign Up</a>
+                    <a (click)="redirect(12)" class="cursorPointer fs-6 text-blue">Forgot Password</a>
+                </p>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<section class="bgLightWhite" *ngIf="selectedTab == 12">
+    <ul class="list-unstyled fs-2">
+        <li class="border-bottom border-2 border-dark d-flex justify-content-center p-3">
+           <span>Forget Your Password?</span> 
+        </li>
+        <li class="border-bottom border-2 border-dark p-3 text-center" >
+            <div class="row">
+                <div class="col-12 m-t-20">
+                    <div>
+                        <input class="w50 colorLightBrown bg-transparent" type="text" value="Email Address">
+                    </div>
+                </div>
+                <div class="m-t-50">
+                    <button class="text-white bgDarkBrown buttonRounded">Reset Password</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+  <!-- Modal -->
+  <section>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content bgOpaque">
+            <div class="modal-body text-center text-white">
+              Booking cancelled
+            </div>
+            <div class="modal-footer justify-content-center border-top-0">
+              <button type="button" class="btn btn-secondary bgBlue text-dark" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  

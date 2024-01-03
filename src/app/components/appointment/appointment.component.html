@@ -1,0 +1,85 @@
+<div class="row">
+    <img class="w100 position-relative" src="./../../../assets/images/services/service7.png" alt="">
+    <div class="position-absolute top-20 m-l-30">
+        <p class="p-font-fan fontBanner text-white">Ready to schedule</p>
+         <p class="p-font-fan fontBanner text-white">your appointment?</p>
+        <button (click)="redirctToLocation('newBooking')" class="fontBannerButton button-apointment mt-3">MAKE AN APPOINTMENT ONLINE</button>
+    </div>
+</div>
+
+<section>
+    <div class="row">
+        <div class="col-12">
+            <h2 class="h1-font text-center text-white m-t-25">YOU WILL FIND THE BEST SERVICE HERE</h2>
+            <p class="colorYellow text-center">15144 80th St Howard Beach NY 11414</p>
+        </div>
+    </div>
+</section>
+
+<section class="container m-t-40">
+    <div class="row">
+        <div class="col-md-6 p-2 border text-center bgDarkBrown text-white cursorPointer" id="newBooking" (click)="navigateToSection('newBooking')">
+            NEW BOOKING
+        </div>
+        <div class="col-md-6 p-2 text-center border border-white bgDarkBrown text-white" (click)="emailPannel.toggle($event)">
+            FIND MY BOOKING
+        </div>
+
+        <p-overlayPanel #emailPannel>
+            <span class="p-float-label">
+                <div *ngIf="!appointmentList.length">
+                    <input pInputText id="selectedEmail" placeholder="Enter Email" class="fs-4" [(ngModel)]="selectedEmail" />
+                   
+                        <button  class="bgLightGreen fs-4" (click)="getAppointmentList(selectedEmail)">Go</button>
+                </div>
+               
+            </span>
+            <section class="bgLightWhite" *ngIf="appointmentList.length">
+
+                <p-table [value]="appointmentList">
+                    <ng-template pTemplate="caption">
+                        <div class="flex justify-content-between">
+                            <!-- <div> -->
+                                <span>
+                                    Appointments
+                                </span>
+                                <span>
+                                    <button (click)="getAppointmentList(selectedEmail)" class="bgLightGreen fs-4 m-1" > <i class="bi bi-arrow-clockwise"></i> </button>
+                                    <button (click)="appointmentList = []" class="bgDanger fs-4"> <i class="bi bi-x-circle"></i></button>
+                                    
+                                    
+                                </span>
+                            <!-- </div> -->
+                           
+
+                        </div>
+                    </ng-template>
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th>Name</th>
+                            <th>Contact</th>
+                            <th>Service</th>
+                            <th>Service Details</th>
+                            <th>Booking Date</th>
+                            <th>Barber Details</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-product>
+                        <tr>
+                            <td>{{ product.name }}</td>
+                            <td>{{ product.phone_number }}</td>
+                            <td>{{ product.service }}</td>
+                            <td>{{ product.serviceDetails }}</td>
+                            <td>{{ product.bookingDate }}/ {{product.bookingTime}}</td>
+                            <td>{{ product.barberDetails }}</td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </section>
+        </p-overlayPanel>
+        <div class="col-12 p-0">
+            <router-outlet></router-outlet>
+        </div>
+
+    </div>
+</section>

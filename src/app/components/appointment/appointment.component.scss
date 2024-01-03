@@ -1,0 +1,45 @@
+.p-font-fan{
+    font-family: fantasy;
+}
+.top-20{
+    top: 20rem;
+}
+.button-apointment{
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 30px;
+}
+.fontBanner{
+    font-size: 35px;
+}
+.fontBannerButton{
+    font-size: 25px;
+}
+
+// #selectedEmail{
+//     font-size: 1.5rem !important;
+// }
+  @media only screen and (max-width: 767px) and (min-width: 425px) {
+    .top-20{
+        top: 12rem;
+    }
+    .fontBanner{
+        font-size: 22px;
+    }
+    .fontBannerButton{
+        font-size: 15px;
+    }
+  }
+  @media only screen and (max-width: 424px) {
+    .top-20{
+        top: 12rem;
+    }
+    .fontBanner{
+        font-size: 16px;
+    }
+    .fontBannerButton{
+        font-size: 10px;
+    }
+  }
